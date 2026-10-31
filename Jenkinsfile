@@ -18,8 +18,7 @@ pipeline {
         }
       }
     }
-  }
-  stage ("execute ansible playbook") {
+    stage ("execute ansible playbook") {
       steps {
         script {
             echo "calling ansible playbook to configure ec2 instances"
@@ -38,4 +37,5 @@ pipeline {
         }
       }
     } 
+  }
 }
