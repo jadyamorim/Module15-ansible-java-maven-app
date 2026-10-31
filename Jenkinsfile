@@ -32,8 +32,8 @@ pipeline {
                 remote.user = user
                 remote.identityFile = keyfile
                 sshCommand remote: remote, command: "ls -l"
-                // sshScript remote: remote, script: "prepare-ansible-server.sh"
-                // sshCommand remote: remote, command: "ansible-playbook my-playbook.yaml"
+                //sshScript remote: remote, script: "prepare-ansible-server.sh"
+                sshCommand remote: remote, command: "ansible-playbook my-playbook.yaml"
             }
         }
       }
